@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Image Resizing WebApp</title>
+    <style>
+        body {
+            background-color: #C2DEDC;
+        }
+        h1 {
+            color: #116A7B;
+            text-align: center;
+        }
+        form {
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: #116A7B;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+         input[type="submit"]:hover {
+           background-color: #0a4d5c; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Resizing WebApp</h1>
+    
+    <form action="/ImageResizingWebApp/ImageResize" method="post" enctype="multipart/form-data">
+        Upload an image (*.bmp):
+        <input type="file" name="imageUploaded" accept="image/bmp" required>
+        <br><br>
+        
+		Resize my image to <input type="number" name="resizePercentage" min="20" max="400" value="50">% of the original size.        
+		<br><br>
+        
+        <input type="submit" name="submitButton" value="Submit"/>
+    </form>
+</body>
+</html>
